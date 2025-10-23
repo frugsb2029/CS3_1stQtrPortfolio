@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Demo</title>
+
+  <style>
+    /* A. */
+    body {
+      background: #FFB6C1 url("sky.jpg") no-repeat fixed center/cover;
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+
+    /* C.  */
+    header, footer {
+      color: white;
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* D. */
+    #main-title {
+      text-transform: uppercase;
+      word-spacing: 10px;
+      letter-spacing: -3px;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 5px yellow;
+    }
+
+    /* E.  */
+    .intro {
+      font-size: 1.5em;
+      margin-top: 0;
+      text-decoration: underline;
+    }
+
+    /* F.  */
+    section > img:first-of-type {
+      display: block;
+      width: 25vw;
+      height: 25vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* G.  */
+    .container img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      float: left;
+    }
+
+    .container ul {
+      list-style-type: none; /* remove bullets */
+      clear: left; /* clear float effect */
+    }
+
+    /* H. */
+    a[target="_blank"] {
+      color: red;
+      text-decoration: underline;
+    }
+
+    a[href="/internal-page"] {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="main-title">Welcome to CSS Selectors</h1>
+    <p class="intro">This is an introduction paragraph.</p>
+  </header>
+
+  <section>
+    <img src="https://wikitechy.com/css/img/css/css-selectors.png" alt="CSS Selectors Example" />
+
+    <div class="container">
+      <img src="https://pixelmechanics.com.sg/wp-content/uploads/2019/04/css.jpg" alt="CSS Example Image" />
+
+      <p>
+        This is a paragraph inside a container.
+      </p>
+
+      <ul>
+        <li class="highlight">First item</li>
+        <li>Second item</li>
+        <li class="highlight">Third item</li>
+      </ul>
+
+      <img src="https://pixelmechanics.com.sg/wp-content/uploads/2019/04/css.jpg" alt="CSS Image 2" />
+
+      <p>
+        This is another paragraph inside a container.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://example.com" target="_blank">External Link</a>
+    <a href="/internal-page">Internal Link</a>
+    <p>Copyright &copy; AL Mendoza</p>
+    <p>
+      A Link to our sponsor <a href="#">link</a>. Hover over the link to see the effect.
+    </p>
+  </footer>
+</body>
+</html>
