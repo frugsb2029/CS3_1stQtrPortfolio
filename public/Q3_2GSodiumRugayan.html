@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing an HTML form!!</title>
+
+    <link rel="icon" type="image/png" href="https://m.media-amazon.com/images/I/71U4Mwe+5DL._AC_UF894,1000_QL80_.jpg">
+    <link rel="stylesheet" href="3Q2GStyle.css">
+
+    <script>
+        function confirmSubmission(){
+            return confirm("Are you sure all information in the submission is complete and true?");
+        }
+
+        function confirmReset(){
+            return confirm("Are you sure you want to reset this form?");
+        }
+
+        function checkBlank(field){
+            if(field.value.trim() === ""){
+                field.classList.add("Error");
+            } else {
+                field.classList.remove("Error");
+            }
+        }
+    </script>
+</head>
+
+<body>
+<h1> Frances Reanna R. Rugayan, 9-Sodium, Batch 2029 </h1>
+<form method="post" action="submit"
+      onsubmit="return confirmSubmission();"
+      onreset="return confirmReset();">
+
+    <fieldset>
+        <legend>Student Information</legend>
+
+        <br>
+
+        <label>
+            Student ID:
+            <input type="number" name="studentID" required>
+        </label><br><br>
+
+        <label>
+            Full Name:
+            <input type="text" name="userName" required onblur="checkBlank(this)">
+        </label><br><br>
+
+        <label>
+            Date of Birth:
+            <input type="date" name="birthDay" required>
+        </label><br><br>
+
+        <label>
+            Email:
+            <input type="email" name="eMail" required>
+        </label><br><br>
+    </fieldset>
+
+    <br> 
+
+    <fieldset>
+        <legend>Additional Information</legend>
+    <br> 
+        <label>
+            Mobile Phone:
+            <input type="text" name="mobilePhone" required onblur="checkBlank(this)">
+        </label><br><br>
+
+        <label>
+            Grade Level:
+            <select name="gradeLevel" required>
+                <option value=""></option>
+                <option value="g7">Grade 7</option>
+                <option value="g8">Grade 8</option>
+                <option value="g9">Grade 9</option>
+                <option value="g10">Grade 10</option>
+                <option value="g11">Grade 11</option>
+                <option value="g12">Grade 12</option>
+            </select>
+        </label><br>
+
+        <p>Residency Type:</p>
+        <label>
+            <input type="radio" name="residency" value="I" required>
+            Intern
+        </label><br>
+
+        <label>
+            <input type="radio" name="residency" value="E" required>
+            Extern
+        </label><br><br>
+
+        <label>
+            Preferred Organization / Club:
+            <select name="preferredEC" required>
+                <option value=""></option>
+                <option value="sciScho">The Science Scholar</option>
+                <option value="lagablab">Ang Lagablab</option>
+                <option value="flux">FLUX</option>
+                <option value="volant">Volant</option>
+                <option value="solace">Solace</option>
+            </select>
+        </label><br><br>
+        <label>
+            Why do you want to join?
+            <textarea name="reason" required onblur="checkBlank(this)"></textarea>
+        </label><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Submit Application">
+    <input type="reset" value="Reset Application">
+
+</form>
+</body>
+</html>
