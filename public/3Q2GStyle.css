@@ -3,7 +3,7 @@ body {
     text-align: center;
     font-family: "Trebuchet MS", sans-serif;
     color: #750551;
-    background-color:rgb(255, 205, 213);
+    background-color:aliceblue;
 }
 h1{
     font-family:cursive;
@@ -13,6 +13,7 @@ label{
     font-size: 15px;
     font-weight: 100;
     font-size: 16px;
+    background-color:aliceblue;
 }
 legend{
     background-color: rgb(249, 66, 145);
@@ -22,7 +23,7 @@ legend{
     font-size: 30px;
     padding: 15px;
     margin: 5px;
-    color: rgb(254, 206, 223);
+    color: aliceblue;
 }
 fieldset{
     background-color: rgb(101, 1, 56);
